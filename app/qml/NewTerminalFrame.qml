@@ -3,7 +3,7 @@ import QtQuick 2.0
 import "utils.js" as Utils
 
 ShaderEffect {
-    property color _staticFrameColor: "#ffffff"
+    property color _staticFrameColor: "#000000"
     property color _backgroundColor: appSettings.backgroundColor
     property color _fontColor: appSettings.fontColor
     property color _lightColor: Utils.mix(_fontColor, _backgroundColor, 0.2)
