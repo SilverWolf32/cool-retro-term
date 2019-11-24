@@ -319,7 +319,7 @@ Item {
 
                  (screenCurvature !== 0 ?
                     "vec4 frameColor = texture2D(frameSource, qt_TexCoord0);
-                     finalColor = mix(finalColor, frameColor.rgb, frameColor.a);"
+                     finalColor = mix(finalColor, frameColor.rgb, frameColor.a / 2);"
                  : "") +
 
                  "gl_FragColor = vec4(finalColor, qt_Opacity);" +
