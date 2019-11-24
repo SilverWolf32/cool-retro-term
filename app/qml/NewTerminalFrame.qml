@@ -64,7 +64,7 @@ ShaderEffect {
             outShadow = clamp(sqrt(outShadow), 0.0, 1.0);
             color += frameColor.rgb * outShadow;
             alpha = sum2(1.0 - smoothstep(vec2(0.0), aadelta, coords) + smoothstep(vec2(1.0) - aadelta, vec2(1.0), coords));
-            alpha = clamp(alpha, 0.0, 1.0) * mix(1.0, 0.9, outShadow);
+            alpha = clamp(alpha, 0.0, 1.0) * mix(1.0, 0.5, outShadow);
 
             float inShadow = 1.0 - prod2(smoothstep(0.0, inShadowLength, coords) - smoothstep(1.0 - inShadowLength, 1.0, coords));
             inShadow = 0.5 * inShadow * inShadow;
